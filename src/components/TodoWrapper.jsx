@@ -4,9 +4,7 @@ import TodoList from './TodoList'
 
 const TodoWrapper = () => {
 
-    const [todos, setTodos] = useState([
-        { todo: 'first todo!', complete: true }
-    ])
+    const [todos, setTodos] = useState([])
 
     const addTodo = (newTodo) => {
         const newTodoList = [...todos, { todo: newTodo, complete: false }]
@@ -29,7 +27,7 @@ const TodoWrapper = () => {
     return (
         <div className='todo-wrapper'>
             <InputTodo todos={todos} addTodo={addTodo} />
-            <TodoList todos={todos} handleCompletedTodo={handleCompletedTodo} handleDeleteTodo={handleDeleteTodo}/>
+            <TodoList todos={todos} handleCompletedTodo={handleCompletedTodo} handleDeleteTodo={handleDeleteTodo} />
         </div>
     )
 }
